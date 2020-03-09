@@ -2,6 +2,7 @@ package com.imooc.utils;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.ToString;
 
 /**
  * 
@@ -22,6 +23,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @author 慕课网 - 风间影月
  * @version V1.0
  */
+@ToString
 public class IMOOCJSONResult {
 
     // 定义jackson对象

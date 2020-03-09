@@ -1,9 +1,12 @@
 package com.imooc.config;
 
+import com.imooc.controller.interceptor.UserTokenInterceptor;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
+import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -23,4 +26,29 @@ public class WebMvcConfig implements WebMvcConfigurer {
         return builder.build();
     }
 
+    @Bean
+    public UserTokenInterceptor returnUserTokenInterceptor() {
+        return new UserTokenInterceptor();
+    }
+
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        registry.addInterceptor(returnUserTokenInterceptor())
+                                .addPathPatterns("/hello")
+                                .addPathPatterns("/shopcart/add")
+                                .addPathPatterns("/shopcart/del")
+                                .addPathPatterns("/address/list")
+                                .addPathPatterns("/address/add")
+                                .addPathPatterns("/address/update")
+                                .addPathPatterns("/address/setDefalut")
+                                .addPathPatterns("/address/delete")
+                                .addPathPatterns("/orders/*")
+                                .addPathPatterns("/center/*")
+                                .addPathPatterns("/userInfo/*")
+                                .addPathPatterns("/myorders/*")
+                                .addPathPatterns("/mycomments/*")
+                                .excludePathPatterns("/myorders/deliver")
+                                .excludePathPatterns("/orders/notifyMerchantOrderPaid");
+        WebMvcConfigurer.super.addInterceptors(registry);
+    }
 }

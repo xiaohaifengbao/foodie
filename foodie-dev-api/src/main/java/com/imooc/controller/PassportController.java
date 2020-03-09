@@ -231,7 +231,7 @@ public class PassportController extends BaseController {
         // 清除用户的相关信息的cookie
         CookieUtils.deleteCookie(request, response, "user");
 
-        // TODO 用户退出登录，需要清空购物车
+        // 删除redis中token
         redisOperator.del(REDIS_USER_TOKEN + ":" + userId);
 
         // 分布式会话中需要清除用户数据
