@@ -1,4 +1,4 @@
-package com.imooc.controller.center;
+package com.imooc.center;
 
 import com.imooc.pojo.Users;
 import com.imooc.service.center.CenterUserService;

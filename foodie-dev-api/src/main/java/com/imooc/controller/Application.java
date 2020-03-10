@@ -1,4 +1,4 @@
-package com.imooc;
+package com.imooc.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,7 +15,6 @@ import tk.mybatis.spring.annotation.MapperScan;
 @ComponentScan(basePackages = {"com.imooc", "org.n3r.idworker"})
 //@EnableTransactionManagement
 @EnableScheduling       // 开启定时任务
-@EnableRedisHttpSession
 public class Application {
 
     public static void main(String[] args) {

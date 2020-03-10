@@ -1,37 +1,14 @@
-package com.imooc.controller.center;
+package com.imooc.center;
 
 import com.imooc.controller.BaseController;
-import com.imooc.pojo.Orders;
-import com.imooc.pojo.Users;
-import com.imooc.pojo.bo.center.CenterUserBO;
 import com.imooc.pojo.vo.OrderStatusCountsVO;
-import com.imooc.resource.FileUpload;
-import com.imooc.service.center.CenterUserService;
-import com.imooc.service.center.MyOrdersService;
 import com.imooc.utils.*;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
-import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Api(value = "用户中心我的订单", tags = {"用户中心我的订单相关接口"})
 @RestController

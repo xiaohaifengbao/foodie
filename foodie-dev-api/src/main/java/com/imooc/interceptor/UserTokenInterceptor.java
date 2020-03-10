@@ -1,4 +1,4 @@
-package com.imooc.controller.interceptor;
+package com.imooc.interceptor;
 
 import com.imooc.utils.IMOOCJSONResult;
 import com.imooc.utils.JsonUtils;

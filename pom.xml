@@ -14,6 +14,7 @@
 		<module>foodie-dev-mapper</module>
 		<module>foodie-dev-service</module>
 		<module>foodie-dev-api</module>
+		<module>foodie-dev-sso</module>
 	</modules>
 
 	<!--
@@ -156,18 +157,6 @@
 			<artifactId>lombok</artifactId>
 			<scope>provided</scope>
 		</dependency>
-
-		<!--spring session-->
-		<dependency>
-			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session-data-redis</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-
 
 		<!-- 打包war [3] 添加依赖 -->
 		<!--<dependency>-->

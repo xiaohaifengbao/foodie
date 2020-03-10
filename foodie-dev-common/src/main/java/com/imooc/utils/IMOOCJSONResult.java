@@ -18,6 +18,7 @@ import lombok.ToString;
  * 				502：拦截器拦截到用户token出错
  * 				555：异常抛出信息
  * 				556: 用户qq校验异常
+ * 				557: sso登录异常
  * @Copyright: Copyright (c) 2020
  * @Company: www.imooc.com
  * @author 慕课网 - 风间影月
@@ -63,6 +64,9 @@ public class IMOOCJSONResult {
     
     public static IMOOCJSONResult errorMap(Object data) {
         return new IMOOCJSONResult(501, "error", data);
+    }
+    public static IMOOCJSONResult errorLoginMap(Object data) {
+        return new IMOOCJSONResult(557, "error", data);
     }
     
     public static IMOOCJSONResult errorTokenMsg(String msg) {

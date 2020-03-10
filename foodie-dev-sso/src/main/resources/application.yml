@@ -15,6 +15,13 @@ server:
 #
 ############################################################
 spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+  session:
+    store-type: redis
   profiles:
     active: dev
   datasource:                                           # 数据源的相关配置

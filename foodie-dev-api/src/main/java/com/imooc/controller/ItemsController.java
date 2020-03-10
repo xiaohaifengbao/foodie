@@ -1,10 +1,7 @@
 package com.imooc.controller;
 
-import com.imooc.enums.YesOrNo;
 import com.imooc.pojo.*;
 import com.imooc.pojo.vo.*;
-import com.imooc.service.CarouselService;
-import com.imooc.service.CategoryService;
 import com.imooc.service.ItemService;
 import com.imooc.utils.IMOOCJSONResult;
 import com.imooc.utils.PagedGridResult;
